@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/vaadin</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping class="com.vaadin.demo.dashboard.data.db.models.MoviesEntity"/>
+        <mapping class="com.vaadin.demo.dashboard.data.db.models.ReleaseDatesEntity"/>
+        <mapping class="com.vaadin.demo.dashboard.data.db.models.AlternateIdsEntity"/>
+        <mapping class="com.vaadin.demo.dashboard.data.db.models.PostersEntity"/>
+        <mapping class="com.vaadin.demo.dashboard.data.db.models.RatingsEntity"/>
+        <mapping class="com.vaadin.demo.dashboard.data.db.models.LinksEntity"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
