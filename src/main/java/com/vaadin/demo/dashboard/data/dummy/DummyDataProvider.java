@@ -2,14 +2,9 @@ package com.vaadin.demo.dashboard.data.dummy;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URL;
-import java.nio.charset.Charset;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,10 +26,10 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import com.vaadin.demo.dashboard.data.DataProvider;
+import com.vaadin.demo.dashboard.data.JsonUtils;
+import com.vaadin.demo.dashboard.data.db.MoviesDAO;
 import com.vaadin.demo.dashboard.domain.DashboardNotification;
 import com.vaadin.demo.dashboard.domain.Movie;
 import com.vaadin.demo.dashboard.domain.MovieRevenue;
@@ -77,7 +72,7 @@ public class DummyDataProvider implements DataProvider {
 
     private void refreshStaticData() {
         countryToCities = loadTheaterData();
-        movies = loadMoviesData();
+        movies = MoviesDAO.getMovies();
         transactions = generateTransactionsData();
         revenue = countRevenues();
     }
@@ -113,22 +108,22 @@ public class DummyDataProvider implements DataProvider {
                     && System.currentTimeMillis() < cache.lastModified()
                             + (1000 * 60 * 60 * 24)) {
                 // Use cache if it's under 24h old
-                json = readJsonFromFile(cache);
+                json = JsonUtils.readJsonFromFile(cache);
             } else {
                 if (ROTTEN_TOMATOES_API_KEY != null) {
                     try {
-                        json = readJsonFromUrl("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=30&apikey="
+                        json = JsonUtils.readJsonFromUrl("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=30&apikey="
                                 + ROTTEN_TOMATOES_API_KEY);
                         // Store in cache
                         FileWriter fileWriter = new FileWriter(cache);
                         fileWriter.write(json.toString());
                         fileWriter.close();
                     } catch (Exception e) {
-                        json = readJsonFromFile(new File(baseDirectory
+                        json = JsonUtils.readJsonFromFile(new File(baseDirectory
                                 + "/movies-fallback.txt"));
                     }
                 } else {
-                    json = readJsonFromFile(new File(baseDirectory
+                    json = JsonUtils.readJsonFromFile(new File(baseDirectory
                             + "/movies-fallback.txt"));
                 }
             }
@@ -147,7 +142,7 @@ public class DummyDataProvider implements DataProvider {
                 if (!posters.get("profile").getAsString()
                         .contains("poster_default")) {
                     Movie movie = new Movie();
-                    movie.setId(i);
+                    movie.setId(new Long(i));
                     movie.setTitle(movieJson.get("title").getAsString());
                     try {
                         movie.setDuration(movieJson.get("runtime").getAsInt());
@@ -185,40 +180,6 @@ public class DummyDataProvider implements DataProvider {
             }
         }
         return result;
-    }
-
-    /* JSON utility method */
-    private static String readAll(Reader rd) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        int cp;
-        while ((cp = rd.read()) != -1) {
-            sb.append((char) cp);
-        }
-        return sb.toString();
-    }
-
-    /* JSON utility method */
-    private static JsonObject readJsonFromUrl(String url) throws IOException {
-        InputStream is = new URL(url).openStream();
-        try {
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is,
-                    Charset.forName("UTF-8")));
-            String jsonText = readAll(rd);
-            JsonElement jelement = new JsonParser().parse(jsonText);
-            JsonObject jobject = jelement.getAsJsonObject();
-            return jobject;
-        } finally {
-            is.close();
-        }
-    }
-
-    /* JSON utility method */
-    private static JsonObject readJsonFromFile(File path) throws IOException {
-        BufferedReader rd = new BufferedReader(new FileReader(path));
-        String jsonText = readAll(rd);
-        JsonElement jelement = new JsonParser().parse(jsonText);
-        JsonObject jobject = jelement.getAsJsonObject();
-        return jobject;
     }
 
     /**

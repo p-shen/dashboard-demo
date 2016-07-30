@@ -1,6 +1,7 @@
-package com.vaadin.demo.dashboard.data.db;
+package com.vaadin.demo.dashboard.data;
 
-import com.vaadin.demo.dashboard.Config;
+import com.vaadin.demo.dashboard.data.db.models.*;
+import com.vaadin.demo.dashboard.domain.Movie;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -11,6 +12,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import java.util.Map;
+import java.util.stream.Stream;
 
 /**
  * Created by Peter on 2016-07-28.
@@ -22,7 +24,20 @@ public class HibernateManager {
     static {
         try {
             Configuration configuration = new Configuration();
-            configuration.configure(Config.getHibernateConfigPath());
+            Class[] mappings = {
+                    MoviesEntity.class,
+                    LinksEntity.class,
+                    AbridgedCastEntity.class,
+                    AlternateIdsEntity.class,
+                    PostersEntity.class,
+                    RatingsEntity.class,
+                    ReleaseDatesEntity.class,
+                    Movie.class
+            };
+            for (int i = 0; i < mappings.length; i++) {
+                configuration.addAnnotatedClass(mappings[i]);
+            }
+            configuration.configure();
 
             serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
             ourSessionFactory = configuration.buildSessionFactory(serviceRegistry);
@@ -33,6 +48,10 @@ public class HibernateManager {
 
     public static Session getSession() throws HibernateException {
         return ourSessionFactory.openSession();
+    }
+
+    public static void close() throws HibernateException {
+        ourSessionFactory.close();
     }
 
     public static void main(final String[] args) throws Exception {

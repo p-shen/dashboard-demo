@@ -6,13 +6,21 @@
     <session-factory>
         <property name="connection.url">jdbc:mysql://localhost:3306/vaadin</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">peter</property>
+        <property name="hibernate.connection.password">123456</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- DB schema will be updated if needed -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
         <mapping class="com.vaadin.demo.dashboard.data.db.models.MoviesEntity"/>
         <mapping class="com.vaadin.demo.dashboard.data.db.models.ReleaseDatesEntity"/>
         <mapping class="com.vaadin.demo.dashboard.data.db.models.AlternateIdsEntity"/>
         <mapping class="com.vaadin.demo.dashboard.data.db.models.PostersEntity"/>
         <mapping class="com.vaadin.demo.dashboard.data.db.models.RatingsEntity"/>
         <mapping class="com.vaadin.demo.dashboard.data.db.models.LinksEntity"/>
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hbm2ddl.auto">update</property> -->
+        <mapping class="com.vaadin.demo.dashboard.data.db.models.AbridgedCastEntity"/>
+        <mapping class="com.vaadin.demo.dashboard.domain.Movie"/>
+
     </session-factory>
 </hibernate-configuration>
