@@ -16,6 +16,8 @@ import java.util.stream.Stream;
 
 /**
  * Created by Peter on 2016-07-28.
+ *
+ * Hibernate manager class used to configure Hibernate and initialize/retrieve Hibernate sessions
  */
 public class HibernateManager {
     private static final SessionFactory ourSessionFactory;
@@ -24,6 +26,10 @@ public class HibernateManager {
     static {
         try {
             Configuration configuration = new Configuration();
+
+            //Hibernate mappings added manually if ran directly from IDE since the mappings
+            //in the hibernate.cfg.xml file is not picked up
+            //TODO: removed in production code
             Class[] mappings = {
                     MoviesEntity.class,
                     LinksEntity.class,
@@ -52,24 +58,5 @@ public class HibernateManager {
 
     public static void close() throws HibernateException {
         ourSessionFactory.close();
-    }
-
-    public static void main(final String[] args) throws Exception {
-        final Session session = getSession();
-        try {
-            System.out.println("querying all the managed entities...");
-            final Map metadataMap = session.getSessionFactory().getAllClassMetadata();
-            for (Object key : metadataMap.keySet()) {
-                final ClassMetadata classMetadata = (ClassMetadata) metadataMap.get(key);
-                final String entityName = classMetadata.getEntityName();
-                final Query query = session.createQuery("from " + entityName);
-                System.out.println("executing: " + query.getQueryString());
-                for (Object o : query.list()) {
-                    System.out.println("  " + o);
-                }
-            }
-        } finally {
-            session.close();
-        }
     }
 }
