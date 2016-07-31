@@ -73,9 +73,9 @@ public class PhotosView extends VerticalLayout implements View {
         List<String> imageUrls = new ArrayList<String>();
 
         //tester locations
-        imageUrls.add("http://i.imgur.com/TjD4Ski.png");
-        imageUrls.add("http://i.imgur.com/gAQItnQ.png");
-        imageUrls.add("http://i.imgur.com/aKJZ0wH.png");
+        imageUrls.add("http://i.imgur.com/Z29NdOs.jpg");
+        imageUrls.add("https://i.redd.it/3lv1qcqgvdcx.jpg");
+        imageUrls.add("http://i.imgur.com/HfrGp2C.jpg");
 
 
         return imageUrls;
