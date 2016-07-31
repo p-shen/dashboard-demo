@@ -18,13 +18,13 @@ import java.util.List;
  */
 public class MoviesDAO {
 
-    private final Session session = HibernateManager.getSession();
+    private static final Session session = HibernateManager.getSession();
 
     /**
      * Get the unprocessed movie entity data imported from the json text
      * @return List<MovieEntity>
      */
-    public List<MoviesEntity> getMoviesEntity() {
+    public static List<MoviesEntity> getMoviesEntity() {
         List<MoviesEntity> ret = session.createQuery("from MoviesEntity").list();
         session.close();
         return ret;
@@ -34,7 +34,7 @@ public class MoviesDAO {
      * Get the processed movie data used for UI views
      * @return Collection<Movie>
      */
-    public Collection<Movie> getMovies() {
+    public static Collection<Movie> getMovies() {
         Collection<Movie> ret = session.createQuery("from Movie").list();
         session.close();
         return ret;
