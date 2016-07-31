@@ -194,6 +194,31 @@
 			<version>5.1.39</version>
 		</dependency>
 
+		<!-- Carousel Vaadin plugin -->
+		<dependency>
+			<groupId>org.vaadin.virkki</groupId>
+			<artifactId>carousel</artifactId>
+			<version>0.5.2</version>
+		</dependency>
+
+		<!-- Guava added as a Carousel dependency -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>19.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava-gwt</artifactId>
+			<version>19.0</version>
+		</dependency>
+
+		<!-- HTTP Client by Square (http://square.github.io/okhttp/) -->
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>3.4.1</version>
+		</dependency>
 
 	</dependencies>
 

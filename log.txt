@@ -1,0 +1,414 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.vaadin.demo:quicktickets-dashboard:war:1.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-compiler-plugin @ line 281, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 281, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 265, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building quicktickets-dashboard 1.0.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> vaadin-maven-plugin:7.6.5:compile (default-cli) > process-resources @ quicktickets-dashboard >>>
+[INFO] 
+[INFO] --- vaadin-maven-plugin:7.6.5:update-theme (default) @ quicktickets-dashboard ---
+[INFO] Updating theme VAADIN/themes/dashboard
+[INFO] Widgetsets found from classpath:
+[INFO] 	com.vaadin.addon.timeline.gwt.TimelineWidgetSet in jar:file:/Users/Peter/.m2/repository/com/vaadin/addon/vaadin-charts/2.0.0/vaadin-charts-2.0.0.jar!/
+[INFO] 	org.vaadin.virkki.carousel.CarouselWidgetSet in jar:file:/Users/Peter/.m2/repository/org/vaadin/virkki/carousel/0.5.2/carousel-0.5.2.jar!/
+[INFO] 	com.vaadin.demo.dashboard.DashboardWidgetSet in file:/Users/Peter/VaadinDemo/dashboard-demo/target/classes
+[INFO] 	com.vaadin.DefaultWidgetSet in jar:file:/Users/Peter/.m2/repository/com/vaadin/vaadin-client/7.6.5/vaadin-client-7.6.5.jar!/
+[INFO] 	com.vaadin.addon.charts.Widgetset in jar:file:/Users/Peter/.m2/repository/com/vaadin/addon/vaadin-charts/2.0.0/vaadin-charts-2.0.0.jar!/
+[INFO] Addon styles found from classpath:
+[INFO] 
+[INFO] Search took 9ms
+[INFO] Theme "VAADIN/themes/dashboard" updated
+[INFO] 
+[INFO] --- vaadin-maven-plugin:7.6.5:compile-theme (default) @ quicktickets-dashboard ---
+[INFO] Updating theme VAADIN/themes/dashboard
+[INFO] Theme "VAADIN/themes/dashboard" compiled
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ quicktickets-dashboard ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- vaadin-maven-plugin:7.6.5:resources (default) @ quicktickets-dashboard ---
+[INFO] auto discovered modules [com.vaadin.demo.dashboard.DashboardWidgetSet]
+[INFO] 1 source files from GWT module com.vaadin.demo.dashboard.DashboardWidgetSet
+[INFO] 
+[INFO] <<< vaadin-maven-plugin:7.6.5:compile (default-cli) < process-resources @ quicktickets-dashboard <<<
+[INFO] 
+[INFO] --- vaadin-maven-plugin:7.6.5:compile (default-cli) @ quicktickets-dashboard ---
+[INFO] auto discovered modules [com.vaadin.demo.dashboard.DashboardWidgetSet]
+[INFO] Compiling module com.vaadin.demo.dashboard.DashboardWidgetSet
+[INFO]    Ignored 112 units with compilation errors in first pass.
+[INFO] Compile with -strict or with -logLevel set to TRACE or DEBUG to see all errors.
+[INFO] 
+[INFO] ----------------------------------------------------------------------------------------------------------------------
+[INFO] Evaluation license for Vaadin Charts 3 is valid until 2016-08-26. Purchase licenses at vaadin.com/pro
+[INFO] ----------------------------------------------------------------------------------------------------------------------
+[INFO] 
+[INFO]    Computing all possible rebind results for 'com.vaadin.client.metadata.ConnectorBundleLoader'
+[INFO]       Rebinding com.vaadin.client.metadata.ConnectorBundleLoader
+[INFO]          Invoking generator com.vaadin.demo.dashboard.OptimizedConnectorBundleLoaderFactory
+[INFO]             Populating eager bundle
+[INFO]                Visiting ButtonConnector with ConnectorInitVisitor
+[INFO]                   ButtonConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.button.ButtonState as a bean
+[INFO]                Will serialize class com.vaadin.shared.communication.URLReference using URLReference_Serializer
+[INFO]                Visiting CssLayoutConnector with ConnectorInitVisitor
+[INFO]                   CssLayoutConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.csslayout.CssLayoutState as a bean
+[INFO]                Visiting HorizontalLayoutConnector with ConnectorInitVisitor
+[INFO]                   HorizontalLayoutConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.orderedlayout.HorizontalLayoutState as a bean
+[INFO]                Will serialize class java.util.HashMap<com.vaadin.shared.Connector, com.vaadin.shared.ui.orderedlayout.AbstractOrderedLayoutState.ChildComponentData> as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.orderedlayout.AbstractOrderedLayoutState.ChildComponentData as a bean
+[INFO]                Visiting LabelConnector with ConnectorInitVisitor
+[INFO]                   LabelConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.label.LabelState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.label.ContentMode as an enum
+[INFO]                Visiting PanelConnector with ConnectorInitVisitor
+[INFO]                   PanelConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.panel.PanelState as a bean
+[INFO]                Visiting PasswordFieldConnector with ConnectorInitVisitor
+[INFO]                   PasswordFieldConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.textfield.AbstractTextFieldState as a bean
+[INFO]                Visiting TextFieldConnector with ConnectorInitVisitor
+[INFO]                   TextFieldConnector will be in the eager bundle
+[INFO]                Visiting UIConnector with ConnectorInitVisitor
+[INFO]                   UIConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.UIState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.PageState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.UIState.LocaleServiceState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.UIState.LocaleData as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.UIState.PushConfigurationState as a bean
+[INFO]                Will serialize class com.vaadin.shared.communication.PushMode as an enum
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.UIState.ReconnectDialogConfigurationState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.UIState.NotificationTypeConfiguration as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.NotificationRole as an enum
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.UIState.TooltipConfigurationState as a bean
+[INFO]                Will serialize java.lang.String[] as an array
+[INFO]                Will serialize class com.vaadin.shared.ui.ui.UIState.LoadingIndicatorConfigurationState as a bean
+[INFO]                Visiting VerticalLayoutConnector with ConnectorInitVisitor
+[INFO]                   VerticalLayoutConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.orderedlayout.VerticalLayoutState as a bean
+[INFO]                Visiting WindowConnector with ConnectorInitVisitor
+[INFO]                   WindowConnector will be in the eager bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.window.WindowState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.window.WindowMode as an enum
+[INFO]                Will serialize class com.vaadin.shared.ui.window.WindowRole as an enum
+[INFO]                Will serialize com.vaadin.shared.Connector[] as an array
+[INFO]                Will serialize class com.vaadin.shared.AbstractComponentState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.ScrollDestination as an enum
+[INFO]                Will serialize class com.vaadin.shared.MouseEventDetails as a bean
+[INFO]                Will serialize class com.vaadin.shared.MouseEventDetails.MouseButton as an enum
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.GridConstants.Section as an enum
+[INFO]                Will serialize com.vaadin.shared.data.sort.SortDirection[] as an array
+[INFO]                Will serialize class com.vaadin.shared.data.sort.SortDirection as an enum
+[INFO]                Will serialize class com.vaadin.shared.ui.table.TableConstants.Section as an enum
+[INFO]                Will serialize class com.vaadin.addon.charts.client.ui.MouseEventDetails as a bean
+[INFO]                Will serialize class com.vaadin.addon.charts.client.ui.MouseEventDetails.MouseButton as an enum
+[INFO]             Populating deferred bundle
+[INFO]                Visiting ChartConnector with ConnectorInitVisitor
+[INFO]                   ChartConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.addon.charts.client.ui.ChartState as a bean
+[INFO]                Visiting ChartOptionsConnector with ConnectorInitVisitor
+[INFO]                   ChartOptionsConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.addon.charts.client.ui.ChartOptionsState as a bean
+[INFO]                Visiting TimelineConnector with ConnectorInitVisitor
+[INFO]                   TimelineConnector will be in the deferred bundle
+[INFO]                Visiting JavaScriptExtension with ConnectorInitVisitor
+[INFO]                   JavaScriptExtension will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.JavaScriptExtensionState as a bean
+[INFO]                Visiting BrowserWindowOpenerConnector with ConnectorInitVisitor
+[INFO]                   BrowserWindowOpenerConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.BrowserWindowOpenerState as a bean
+[INFO]                Visiting FileDownloaderConnector with ConnectorInitVisitor
+[INFO]                   FileDownloaderConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.communication.SharedState as a bean
+[INFO]                Visiting ResponsiveConnector with ConnectorInitVisitor
+[INFO]                   ResponsiveConnector will be in the deferred bundle
+[INFO]                Visiting RpcDataSourceConnector with ConnectorInitVisitor
+[INFO]                   RpcDataSourceConnector will be in the deferred bundle
+[INFO]                Visiting AbsoluteLayoutConnector with ConnectorInitVisitor
+[INFO]                   AbsoluteLayoutConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.absolutelayout.AbsoluteLayoutState as a bean
+[INFO]                Visiting JavaScriptComponentConnector with ConnectorInitVisitor
+[INFO]                   JavaScriptComponentConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.JavaScriptComponentState as a bean
+[INFO]                Visiting AccordionConnector with ConnectorInitVisitor
+[INFO]                   AccordionConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.accordion.AccordionState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.tabsheet.TabState as a bean
+[INFO]                Visiting AudioConnector with ConnectorInitVisitor
+[INFO]                   AudioConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.audio.AudioState as a bean
+[INFO]                Visiting BrowserFrameConnector with ConnectorInitVisitor
+[INFO]                   BrowserFrameConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.browserframe.BrowserFrameState as a bean
+[INFO]                Visiting CalendarConnector with ConnectorInitVisitor
+[INFO]                   CalendarConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.calendar.CalendarState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.calendar.CalendarState.Event as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.calendar.CalendarState.Day as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.calendar.CalendarState.Action as a bean
+[INFO]                Visiting CheckBoxConnector with ConnectorInitVisitor
+[INFO]                   CheckBoxConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.checkbox.CheckBoxState as a bean
+[INFO]                Visiting ColorPickerConnector with ConnectorInitVisitor
+[INFO]                   ColorPickerConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.colorpicker.ColorPickerState as a bean
+[INFO]                Visiting ColorPickerAreaConnector with ConnectorInitVisitor
+[INFO]                   ColorPickerAreaConnector will be in the deferred bundle
+[INFO]                Visiting ComboBoxConnector with ConnectorInitVisitor
+[INFO]                   ComboBoxConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.combobox.ComboBoxState as a bean
+[INFO]                Visiting CustomComponentConnector with ConnectorInitVisitor
+[INFO]                   CustomComponentConnector will be in the deferred bundle
+[INFO]                Visiting CustomFieldConnector with ConnectorInitVisitor
+[INFO]                   CustomFieldConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.AbstractFieldState as a bean
+[INFO]                Visiting CustomLayoutConnector with ConnectorInitVisitor
+[INFO]                   CustomLayoutConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.customlayout.CustomLayoutState as a bean
+[INFO]                Visiting DateFieldConnector with ConnectorInitVisitor
+[INFO]                   DateFieldConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.datefield.PopupDateFieldState as a bean
+[INFO]                Will serialize class java.util.Date using Date_Serializer
+[INFO]                Visiting DragAndDropWrapperConnector with ConnectorInitVisitor
+[INFO]                   DragAndDropWrapperConnector will be in the deferred bundle
+[INFO]                Visiting EmbeddedConnector with ConnectorInitVisitor
+[INFO]                   EmbeddedConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.embedded.EmbeddedState as a bean
+[INFO]                Visiting FlashConnector with ConnectorInitVisitor
+[INFO]                   FlashConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.flash.FlashState as a bean
+[INFO]                Visiting FormConnector with ConnectorInitVisitor
+[INFO]                   FormConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.form.FormState as a bean
+[INFO]                Visiting FormLayoutConnector with ConnectorInitVisitor
+[INFO]                   FormLayoutConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.orderedlayout.FormLayoutState as a bean
+[INFO]                Visiting GridConnector with ConnectorInitVisitor
+[INFO]                   GridConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.GridState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.GridStaticSectionState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.HeightMode as an enum
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.GridColumnState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.GridStaticSectionState.RowState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.GridStaticSectionState.CellState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.GridStaticCellType as an enum
+[INFO]                Visiting DetailComponentManagerConnector with ConnectorInitVisitor
+[INFO]                   DetailComponentManagerConnector will be in the deferred bundle
+[INFO]                Visiting MultiSelectionModelConnector with ConnectorInitVisitor
+[INFO]                   MultiSelectionModelConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.selection.MultiSelectionModelState as a bean
+[INFO]                Visiting NoSelectionModelConnector with ConnectorInitVisitor
+[INFO]                   NoSelectionModelConnector will be in the deferred bundle
+[INFO]                Visiting SingleSelectionModelConnector with ConnectorInitVisitor
+[INFO]                   SingleSelectionModelConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.grid.selection.SingleSelectionModelState as a bean
+[INFO]                Visiting GridLayoutConnector with ConnectorInitVisitor
+[INFO]                   GridLayoutConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.gridlayout.GridLayoutState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.gridlayout.GridLayoutState.ChildComponentData as a bean
+[INFO]                Visiting HorizontalSplitPanelConnector with ConnectorInitVisitor
+[INFO]                   HorizontalSplitPanelConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.splitpanel.HorizontalSplitPanelState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.splitpanel.AbstractSplitPanelState.SplitterState as a bean
+[INFO]                Visiting ImageConnector with ConnectorInitVisitor
+[INFO]                   ImageConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.image.ImageState as a bean
+[INFO]                Visiting InlineDateFieldConnector with ConnectorInitVisitor
+[INFO]                   InlineDateFieldConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.datefield.InlineDateFieldState as a bean
+[INFO]                Visiting JavaScriptManagerConnector with ConnectorInitVisitor
+[INFO]                   JavaScriptManagerConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.extension.javascriptmanager.JavaScriptManagerState as a bean
+[INFO]                Visiting LinkConnector with ConnectorInitVisitor
+[INFO]                   LinkConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.link.LinkState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.BorderStyle as an enum
+[INFO]                Visiting ListSelectConnector with ConnectorInitVisitor
+[INFO]                   ListSelectConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.select.AbstractSelectState as a bean
+[INFO]                Visiting MenuBarConnector with ConnectorInitVisitor
+[INFO]                   MenuBarConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.menubar.MenuBarState as a bean
+[INFO]                Visiting NativeButtonConnector with ConnectorInitVisitor
+[INFO]                   NativeButtonConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.button.NativeButtonState as a bean
+[INFO]                Visiting NativeSelectConnector with ConnectorInitVisitor
+[INFO]                   NativeSelectConnector will be in the deferred bundle
+[INFO]                Visiting OptionGroupConnector with ConnectorInitVisitor
+[INFO]                   OptionGroupConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.optiongroup.OptionGroupState as a bean
+[INFO]                Visiting PopupDateFieldConnector with ConnectorInitVisitor
+[INFO]                   PopupDateFieldConnector will be in the deferred bundle
+[INFO]                Visiting PopupViewConnector with ConnectorInitVisitor
+[INFO]                   PopupViewConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.popupview.PopupViewState as a bean
+[INFO]                Visiting ProgressBarConnector with ConnectorInitVisitor
+[INFO]                   ProgressBarConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.progressindicator.ProgressBarState as a bean
+[INFO]                Visiting ProgressIndicatorConnector with ConnectorInitVisitor
+[INFO]                   ProgressIndicatorConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.progressindicator.ProgressIndicatorState as a bean
+[INFO]                Visiting RichTextAreaConnector with ConnectorInitVisitor
+[INFO]                   RichTextAreaConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.textarea.RichTextAreaState as a bean
+[INFO]                Visiting SliderConnector with ConnectorInitVisitor
+[INFO]                   SliderConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.slider.SliderState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.slider.SliderOrientation as an enum
+[INFO]                Visiting TabsheetConnector with ConnectorInitVisitor
+[INFO]                   TabsheetConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.tabsheet.TabsheetState as a bean
+[INFO]                Visiting TableConnector with ConnectorInitVisitor
+[INFO]                   TableConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.table.TableState as a bean
+[INFO]                Will serialize class com.vaadin.shared.ui.table.CollapseMenuContent as an enum
+[INFO]                Visiting TextAreaConnector with ConnectorInitVisitor
+[INFO]                   TextAreaConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.textarea.TextAreaState as a bean
+[INFO]                Visiting TreeConnector with ConnectorInitVisitor
+[INFO]                   TreeConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.tree.TreeState as a bean
+[INFO]                Visiting TreeTableConnector with ConnectorInitVisitor
+[INFO]                   TreeTableConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.treetable.TreeTableState as a bean
+[INFO]                Visiting TwinColSelectConnector with ConnectorInitVisitor
+[INFO]                   TwinColSelectConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.twincolselect.TwinColSelectState as a bean
+[INFO]                Visiting UploadConnector with ConnectorInitVisitor
+[INFO]                   UploadConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.upload.UploadState as a bean
+[INFO]                Visiting VerticalSplitPanelConnector with ConnectorInitVisitor
+[INFO]                   VerticalSplitPanelConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.splitpanel.VerticalSplitPanelState as a bean
+[INFO]                Visiting VideoConnector with ConnectorInitVisitor
+[INFO]                   VideoConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.video.VideoState as a bean
+[INFO]                Visiting ColorPickerGradientConnector with ConnectorInitVisitor
+[INFO]                   ColorPickerGradientConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.colorpicker.ColorPickerGradientState as a bean
+[INFO]                Visiting ColorPickerGridConnector with ConnectorInitVisitor
+[INFO]                   ColorPickerGridConnector will be in the deferred bundle
+[INFO]                Will serialize class com.vaadin.shared.ui.colorpicker.ColorPickerGridState as a bean
+[INFO]                Visiting JavaScriptRendererConnector with ConnectorInitVisitor
+[INFO]                   JavaScriptRendererConnector will be in the deferred bundle
+[INFO]                Visiting ButtonRendererConnector with ConnectorInitVisitor
+[INFO]                   ButtonRendererConnector will be in the deferred bundle
+[INFO]                Visiting DateRendererConnector with ConnectorInitVisitor
+[INFO]                   DateRendererConnector will be in the deferred bundle
+[INFO]                Visiting UnsafeHtmlRendererConnector with ConnectorInitVisitor
+[INFO]                   UnsafeHtmlRendererConnector will be in the deferred bundle
+[INFO]                Visiting ImageRendererConnector with ConnectorInitVisitor
+[INFO]                   ImageRendererConnector will be in the deferred bundle
+[INFO]                Visiting NumberRendererConnector with ConnectorInitVisitor
+[INFO]                   NumberRendererConnector will be in the deferred bundle
+[INFO]                Visiting ProgressBarRendererConnector with ConnectorInitVisitor
+[INFO]                   ProgressBarRendererConnector will be in the deferred bundle
+[INFO]                Visiting TextRendererConnector with ConnectorInitVisitor
+[INFO]                   TextRendererConnector will be in the deferred bundle
+[INFO]                Visiting HorizontalCarouselConnector with ConnectorInitVisitor
+[INFO]                   HorizontalCarouselConnector will be in the deferred bundle
+[INFO]                Will serialize class org.vaadin.virkki.carousel.client.widget.CarouselState as a bean
+[INFO]                Will serialize class org.vaadin.virkki.carousel.client.widget.gwt.ArrowKeysMode as an enum
+[INFO]                Will serialize class org.vaadin.virkki.carousel.client.widget.gwt.CarouselLoadMode as an enum
+[INFO]                Visiting VerticalCarouselConnector with ConnectorInitVisitor
+[INFO]                   VerticalCarouselConnector will be in the deferred bundle
+[INFO]    Computing all possible rebind results for 'com.vaadin.client.ui.dd.VAcceptCriterionFactory'
+[INFO]       Rebinding com.vaadin.client.ui.dd.VAcceptCriterionFactory
+[INFO]          Invoking generator com.vaadin.server.widgetsetutils.AcceptCriteriaFactoryGenerator
+[INFO]             Detecting available criteria ...
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.AcceptAll
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.And
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.ContainsDataFlavor
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.SourceIs
+[INFO]             creating mapping for com.vaadin.ui.AbstractSelect.TargetItemIs
+[INFO]             creating mapping for com.vaadin.ui.AbstractSelect.AcceptItem
+[INFO]             creating mapping for com.vaadin.ui.Table.TableDropCriterion
+[INFO]             creating mapping for com.vaadin.ui.Tree.TreeDropCriterion
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.Not
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.Or
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.ServerSideCriterion
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.SourceIsTarget
+[INFO]             creating mapping for com.vaadin.event.dd.acceptcriteria.TargetDetailIs
+[INFO]             creating mapping for com.vaadin.ui.Tree.TargetInSubtree
+[INFO]             Done. (0seconds)
+[INFO]    Tracing compile failure path for type 'com.google.common.collect.Lists'
+[INFO]       [ERROR] Errors in 'com/google/common/collect/Lists.java'
+[INFO]          [ERROR] Line 282: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 293: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 761: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 589: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 946: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 651: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 793: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 549: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 812: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 902: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 558: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 933: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 553: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 695: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 47: The import javax.annotation.Nullable cannot be resolved
+[INFO]          [ERROR] Line 655: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 777: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 249: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 239: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 667: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 807: Nullable cannot be resolved to a type
+[INFO]    [ERROR] Hint: Your source appears not to live underneath a subpackage called 'client'; no problem, but you'll need to use the <source> directive in your module to make it accessible
+[INFO]    Tracing compile failure path for type 'com.google.common.base.Function'
+[INFO]       [ERROR] Errors in 'com/google/common/base/Function.java'
+[INFO]          [ERROR] Line 45: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 58: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 21: The import javax.annotation.Nullable cannot be resolved
+[INFO]    [ERROR] Hint: Your source appears not to live underneath a subpackage called 'client'; no problem, but you'll need to use the <source> directive in your module to make it accessible
+[INFO]    Tracing compile failure path for type 'com.google.common.base.Objects'
+[INFO]       [ERROR] Errors in 'com/google/common/base/Objects.java'
+[INFO]          [ERROR] Line 200: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 173: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 69: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 50: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 212: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 25: The import javax.annotation.Nullable cannot be resolved
+[INFO]    [ERROR] Hint: Your source appears not to live underneath a subpackage called 'client'; no problem, but you'll need to use the <source> directive in your module to make it accessible
+[INFO]    Tracing compile failure path for type 'com.google.common.collect.Iterables'
+[INFO]       [ERROR] Errors in 'com/google/common/collect/super/com/google/common/collect/Iterables.java'
+[INFO]          [ERROR] Line 112: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 717: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 39: The import javax.annotation.Nullable cannot be resolved
+[INFO]          [ERROR] Line 274: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 607: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 322: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 758: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 1009: Nullable cannot be resolved to a type
+[INFO]          [ERROR] Line 697: Nullable cannot be resolved to a type
+[INFO]    [ERROR] Hint: Check that the type name 'com.google.common.collect.Iterables' is really what you meant
+[INFO]    [ERROR] Hint: Check that your classpath includes all required source roots
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 20.447 s
+[INFO] Finished at: 2016-07-30T14:51:31-07:00
+[INFO] Final Memory: 19M/225M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.vaadin:vaadin-maven-plugin:7.6.5:compile (default-cli) on project quicktickets-dashboard: Command [[
+[ERROR] /bin/sh -c /Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/bin/java -Xmx512M -Xss1024k -classpath /Users/Peter/VaadinDemo/dashboard-demo/target/classes:/Users/Peter/VaadinDemo/dashboard-demo/src/main/java:/Users/Peter/VaadinDemo/dashboard-demo/src/main/resources:/Users/Peter/.m2/repository/com/vaadin/vaadin-server/7.6.5/vaadin-server-7.6.5.jar:/Users/Peter/.m2/repository/com/vaadin/vaadin-sass-compiler/0.9.13/vaadin-sass-compiler-0.9.13.jar:/Users/Peter/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/Users/Peter/.m2/repository/com/vaadin/external/flute/flute/1.3.0.gg2/flute-1.3.0.gg2.jar:/Users/Peter/.m2/repository/com/yahoo/platform/yui/yuicompressor/2.4.8/yuicompressor-2.4.8.jar:/Users/Peter/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar:/Users/Peter/.m2/repository/com/vaadin/vaadin-shared/7.6.5/vaadin-shared-7.6.5.jar:/Users/Peter/.m2/repository/com/vaadin/external/streamhtmlparser/streamhtmlparser-jsilver/0.0.10.vaadin1/streamhtmlparser-jsilver-0.0.10.vaadin1.jar:/Users/Peter/.m2/repository/com/vaadin/external/google/guava/16.0.1.vaadin1/guava-16.0.1.vaadin1.jar:/Users/Peter/.m2/repository/org/jsoup/jsoup/1.8.3/jsoup-1.8.3.jar:/Users/Peter/.m2/repository/com/vaadin/vaadin-themes/7.6.5/vaadin-themes-7.6.5.jar:/Users/Peter/.m2/repository/com/vaadin/vaadin-client-compiler/7.6.5/vaadin-client-compiler-7.6.5.jar:/Users/Peter/.m2/repository/com/vaadin/vaadin-client/7.6.5/vaadin-client-7.6.5.jar:/Users/Peter/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar:/Users/Peter/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar:/Users/Peter/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/Peter/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/Users/Peter/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar:/Users/Peter/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.11/cssparser-0.9.11.jar:/Users/Peter/.m2/repository/ant/ant-launcher/1.6.5/ant-launcher-1.6.5.jar:/Users/Peter/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/Users/Peter/.m2/repository/org/ow2/asm/asm-util/5.0.3/asm-util-5.0.3.jar:/Users/Peter/.m2/repository/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.jar:/Users/Peter/.m2/repository/org/ow2/asm/asm-commons/5.0.3/asm-commons-5.0.3.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-annotations/8.1.12.v20130726/jetty-annotations-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-plus/8.1.12.v20130726/jetty-plus-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/orbit/javax.transaction/1.1.1.v201105210645/javax.transaction-1.1.1.v201105210645.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-jndi/8.1.12.v20130726/jetty-jndi-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-server/8.1.12.v20130726/jetty-server-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-webapp/8.1.12.v20130726/jetty-webapp-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-xml/8.1.12.v20130726/jetty-xml-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-servlet/8.1.12.v20130726/jetty-servlet-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-security/8.1.12.v20130726/jetty-security-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/orbit/javax.annotation/1.1.0.v201108011116/javax.annotation-1.1.0.v201108011116.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/orbit/org.objectweb.asm/3.1.0.v200803061910/org.objectweb.asm-3.1.0.v200803061910.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-servlets/8.1.12.v20130726/jetty-servlets-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-continuation/8.1.12.v20130726/jetty-continuation-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-client/8.1.12.v20130726/jetty-client-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-http/8.1.12.v20130726/jetty-http-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-io/8.1.12.v20130726/jetty-io-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/eclipse/jetty/jetty-util/8.1.12.v20130726/jetty-util-8.1.12.v20130726.jar:/Users/Peter/.m2/repository/org/jdesktop/swing-worker/1.1/swing-worker-1.1.jar:/Users/Peter/.m2/repository/commons-codec/commons-codec/1.8/commons-codec-1.8.jar:/Users/Peter/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/Users/Peter/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar:/Users/Peter/.m2/repository/org/apache/james/apache-mime4j/0.6/apache-mime4j-0.6.jar:/Users/Peter/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar:/Users/Peter/.m2/repository/org/apache/httpcomponents/httpcore/4.3/httpcore-4.3.jar:/Users/Peter/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar:/Users/Peter/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.19/nekohtml-1.9.19.jar:/Users/Peter/.m2/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar:/Users/Peter/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar:/Users/Peter/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/Users/Peter/.m2/repository/com/ibm/icu/icu4j/50.1.1/icu4j-50.1.1.jar:/Users/Peter/.m2/repository/com/vaadin/vaadin-client-compiler-deps/1.2.0/vaadin-client-compiler-deps-1.2.0.jar:/Users/Peter/.m2/repository/com/vaadin/addon/vaadin-charts/2.0.0/vaadin-charts-2.0.0.jar:/Users/Peter/.m2/repository/com/google/code/gson/gson/2.2/gson-2.2.jar:/Users/Peter/.m2/repository/org/vaadin/addons/googleanalyticstracker/2.1.0/googleanalyticstracker-2.1.0.jar:/Users/Peter/.m2/repository/org/peimari/maddon/1.15/maddon-1.15.jar:/Users/Peter/.m2/repository/org/vaadin/addon/confirmdialog/2.1.1/confirmdialog-2.1.1.jar:/Users/Peter/.m2/repository/org/commonjava/googlecode/markdown4j/markdown4j/2.2-cj-1.0/markdown4j-2.2-cj-1.0.jar:/Users/Peter/.m2/repository/commons-beanutils/commons-beanutils/1.9.1/commons-beanutils-1.9.1.jar:/Users/Peter/.m2/repository/org/slf4j/slf4j-jdk14/1.6.4/slf4j-jdk14-1.6.4.jar:/Users/Peter/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar:/Users/Peter/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/Users/Peter/.m2/repository/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar:/Users/Peter/.m2/repository/org/hibernate/hibernate-core/5.2.1.Final/hibernate-core-5.2.1.Final.jar:/Users/Peter/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/Peter/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/Peter/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/Users/Peter/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/Peter/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/Users/Peter/.m2/repository/org/jboss/jandex/2.0.0.Final/jandex-2.0.0.Final.jar:/Users/Peter/.m2/repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/Users/Peter/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/Peter/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/Users/Peter/.m2/repository/javax/enterprise/cdi-api/1.1-PFD/cdi-api-1.1-PFD.jar:/Users/Peter/.m2/repository/javax/el/el-api/2.2/el-api-2.2.jar:/Users/Peter/.m2/repository/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.1_spec/1.0.0.Beta1/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar:/Users/Peter/.m2/repository/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar:/Users/Peter/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/Peter/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar:/Users/Peter/.m2/repository/org/vaadin/virkki/carousel/0.5.2/carousel-0.5.2.jar:/Users/Peter/.m2/repository/org/eclipse/xtext/org.eclipse.xtext.xbase.lib.gwt/2.4.0/org.eclipse.xtext.xbase.lib.gwt-2.4.0.jar:/Users/Peter/.m2/repository/com/google/guava/guava-gwt/10.0.1/guava-gwt-10.0.1.jar:/Users/Peter/.m2/repository/org/eclipse/xtext/org.eclipse.xtext.xbase.lib/2.4.0/org.eclipse.xtext.xbase.lib-2.4.0.jar:/Users/Peter/.m2/repository/com/squareup/okhttp3/okhttp/3.4.1/okhttp-3.4.1.jar:/Users/Peter/.m2/repository/com/squareup/okio/okio/1.9.0/okio-1.9.0.jar:/Users/Peter/.m2/repository/com/vaadin/vaadin-client/7.6.5/vaadin-client-7.6.5.jar:/Users/Peter/.m2/repository/com/vaadin/vaadin-client-compiler/7.6.5/vaadin-client-compiler-7.6.5.jar com.google.gwt.dev.Compiler -logLevel INFO -style OBF -war /Users/Peter/VaadinDemo/dashboard-demo/src/main/webapp/VAADIN/widgetsets -localWorkers 4 -XfragmentCount -1 -extra /Users/Peter/VaadinDemo/dashboard-demo/target/extra -compileReport -gen /Users/Peter/VaadinDemo/dashboard-demo/target/.generated com.vaadin.demo.dashboard.DashboardWidgetSet
+[ERROR] ]] failed with status 1
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

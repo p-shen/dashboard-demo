@@ -16,6 +16,8 @@ import com.vaadin.client.ui.ui.UIConnector;
 import com.vaadin.client.ui.window.WindowConnector;
 import com.vaadin.server.widgetsetutils.ConnectorBundleLoaderFactory;
 import com.vaadin.shared.ui.Connect.LoadStyle;
+import org.vaadin.virkki.carousel.client.widget.HorizontalCarouselConnector;
+import org.vaadin.virkki.carousel.client.widget.VerticalCarouselConnector;
 
 public final class OptimizedConnectorBundleLoaderFactory extends
         ConnectorBundleLoaderFactory {
